@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Sharonsyra/bootcamp.svg?branch=master)](https://travis-ci.org/Sharonsyra/bootcamp)
+[![Build Status](https://travis-ci.org/Sharonsyra/bootcamp.svg?branch=develop)](https://travis-ci.org/Sharonsyra/bootcamp)
 
 # bootcamp
 
