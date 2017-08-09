@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Home | Bucketee</title>
+ 
+    <link rel="shortcut icon" type="image/png" href="/static/images/favicon.png"/>
+
+   <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+      <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+      
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 
+ 
+</head>
+ 
+<body>
+ 
+        <div class="header">
+            <nav class="blue-grey">
+                <ul class="right nav nav-pills pull-right">
+                    <li role="presentation" class=""> <a href="/profile"> Home </a> </li>
+                    <li role="presentation" class=""> <a href="/create_bucket"> New Bucketlist </a> </li>
+                    <li role="presentation" class=""> <a href="/logout"> Logout </a> </li>                   
+                </ul>
+            </nav>
+            <h3 class="text-muted center">Bucketee</h3>
+        </div>
+
+    <div class="container">
+        <div class="row">
+           <span> <p class="center"> This is a list of bucketlists posted by other awesome people like you. Comment, upvote or downvote </p> </span>
+        </div>
+    <div class="row">
+        
+          {% for bucket in buckets %}
+          <div class="col s12 m6 l4">
+          <div class="card medium blue">
+            <div class="card-content white-text idea">
+              <span class="card-title">{{bucket.name}}</span>
+              <hr>
+              <p>
+              </p>
+            </div>
+            <div class="card-action">
+            </div>
+          </div>
+          </div>
+          {% endfor %}
+ 
+        </div>
+ 
+    </div>
+
+    <footer class="page-footer blue-grey">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text"> Details </h5>
+              <p class="grey-text text-lighten-4">
+                More awesome details about bucketee
+              </p>
+            </div>
+            <div class="col l4 offset-12 s12">
+              <h5 class="white-text"> Links </h5>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container"> &copy; Andela Bucketee 2017 </div>
+        </div>
+      </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+</body>
+ 
+</html>
