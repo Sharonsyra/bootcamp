@@ -85,10 +85,11 @@ def create_bucket():
             name = request.form['name']
             if name in Bucketlists:
                 flash("Bucketlist name already exists!")
+            description = request.form['description']
             time = arrow.utcnow()
             date_created = time.humanize()
             date_modified = time.humanize()
-            new_bucket = Bucketlist(name=name, date_created=date_created,
+            new_bucket = Bucketlist(name=name, description=description, date_created=date_created,
                                     date_modified=date_modified)
             flash("Bucketlist added successfully!")
             Bucketlists.append(new_bucket)
@@ -118,8 +119,6 @@ def edit_bucket(bucket_id):
         elif request.method == 'PUT':
             name = request.form['name']
             one_bucket = name
-            # edited_bucket = Bucketlists(name=name)
-            # Bucketlists.append(edited_bucket)
     flash('You are not logged in. Please login or register!')
     return redirect('/')
 
